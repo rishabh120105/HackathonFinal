@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <div class="navbar" id="myNavbar">
+        <a href="#home">
+            <span class="logo-text">Rishabh Portfolio</span>
+        </a>
+        <div class="dropdown hide-on-mobile">
+            <button class="dropbtn hide-on-mobile" onclick="toggleDropdown()">Educational Qualifications</button>
+            <div class="dropdown-content hide-on-mobile" id="dropdownContent">
+                <a href="#high-school">High School</a>
+                <a href="#college">College</a>
+            </div>
+        </div>
+        <a href="#skills" class="hide-on-mobile">Skills</a>
+        <a href="#contact-section" class="hide-on-mobile">Contact Me</a>
+        <div id="hiddenButtons" class="hidden-buttons">
+            <a href="#high-school">High School</a>
+            <a href="#college">College</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact-section">Contact Me</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction(); toggleDropdown();">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <div id="about-section">
+        <img src="picture.jpg" alt="Your Picture">
+        <div class="text">
+            <h1>Rishabh Arayan Veedu</h1>
+            <p>
+                I am currently doing my undergraduate course in RV University. I am doing Btech Computer Science.
+                I graduated my 10th and 12th Grade in Greenwood High International School, Sarjapur.
+                Before joining my undergraduate course in RV Unviersity i worked as an intern in Transworld
+                International for
+                more than 2 months. Over there i worked in helping them develop a brand new application and website for
+                the new company
+                they were launching. This helped me get good exposure.
+            </p>
+        </div>
+    </div>
+
+    <div id="education-section">
+        <h1>Educational Qualifications</h1>
+        <div class="slider-container" id="high-school">
+            <h1 style="color: #3498db;">School</h1>
+            <h3>Greenwood High</h3>
+            <div class="slides">
+                <div class="slide">
+                    <img src="greenwood.jpg" alt="Image 1">
+                    <div class="text-container">
+                        <p class="text">
+                        <h3>10th Grade</h3>
+                        I finished my 10th grade in Greenwood high and graduated in the year 2021.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="greenwood.jpg" alt="Image 2">
+                    <div class="text-container">
+                        <p class="text">
+                        <h3>12th Grade</h3>
+                        I finished my 12th grade in Greenwood High and graduated in the year 2023.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow prev hide-on-mobile" onclick="prevSlide()">❮</button>
+            <button class="arrow next hide-on-mobile" onclick="nextSlide()">❯</button>
+        </div>
+        <div id="college">
+            <h1>College</h1>
+            <h3>RV University</h3>
+            <div class="college-info">
+                <div class="college-image"
+                    style="background-image: url('https://emba.rvu.edu.in/wp-content/uploads/2023/04/RVU_Library04-scaled.jpg');">
+                    <div class="college-details">
+                        <h3>Btech Computer Science</h3>
+                        <p>I am currently doing my undergraduate course in RV University and will graduate from the
+                            college in the year 2027.
+                            </code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <h1>Skills</h1>
+        <h2>Programming</h2>
+        <div class="programming-skills">
+            <div class="skill-logo" onclick="openModal('java')">
+                <img src="javalogo.png" alt="Java Logo">
+            </div>
+
+            <div class="skill-logo" onclick="openModal('python')">
+                <img src="pythonlogo.png" alt="Python Logo" style="padding-top: 50px;">
+            </div>
+
+            <div class="skill-logo" onclick="openModal('c')">
+                <img src="clogo.png" alt="C Logo">
+            </div>
+        </div>
+        <h2>Web Development</h2>
+        <div class="web-development">
+            <div class="skill-logo" onclick="openModal('html')">
+                <img src="htmllogo.png" alt="html Logo" >
+            </div>
+
+            <div class="skill-logo" onclick="openModal('css')">
+                <img src="csslogo.png" alt="Css Logo" >
+            </div>
+
+            <div class="skill-logo" id="js" onclick="openModal('js')">
+                <img src="jslogo.png" alt="Java script Logo" >
+            </div>
+        </div>
+    </div>
+    <div class="partition"></div>
+    <div id="contact-section" class="contact-section">
+        <h2>Contact Me</h2>
+
+        <div class="contact-details">
+            <div class="contact-info">
+                <div class="contact-icon" style="background-color: #3498db;"></div>
+                <p>Email: <a href="mailto:rishabha.btech23@rvu.edu.in" style="text-decoration: none;color: white;">rishabha.btech23@rvu.edu.in</a></p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-icon" style="background-color: #e74c3c;"></div>
+                <p>Location: <a href="https://www.google.com/maps?q=Bangalore, Karnataka" style="text-decoration: none; color: white;">Bangalore, Karnataka</a></p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-icon" style="background-color: #2ecc71;"></div>
+                <p>Phone: <a href="tel:+918197888687" style="text-decoration: none; color: white;">+91 8197888687</a></p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="post" onsubmit="event.preventDefault(); submitForm();">
+                <div class="form-group">
+                    <div class="name-fields">
+                        <div class="half-width">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="half-width">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="javaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('java')">&times;</span>
+            <h3>I have studied java in my 11th and 12th an have done many projects on them</h3>
+        </div>
+    </div>
+
+    <div id="pythonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('python')">&times;</span>
+            <h3>I have only just started learning python but have managed to cover a lot in it. I have done projects
+                in data analysis using java.
+            </h3>
+        </div>
+    </div>
+
+    <div id="cModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('c')">&times;</span>
+            <h3>I have started C this year and have picked it up fast as it is somewhat similar to java. I have also
+                done multiple projects in c.
+            </h3>
+        </div>
+    </div>
+
+    <div id="htmlModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('html')">&times;</span>
+            <h3>I have been leraning html for the past 5 years and have done many projects in it.
+            </h3>
+        </div>
+    </div>
+
+    <div id="cssModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('css')">&times;</span>
+            <h3>I have started learning css this year and have done multiple projects with the help of it.
+            </h3>
+        </div>
+    </div>
+
+    <div id="jsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('js')">&times;</span>
+            <h3>I have started learning java script this year and have created websites using it to make them more dynamic.
+            </h3>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+
+</html>
